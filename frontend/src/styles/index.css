@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700;800&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html, body, #root { height: 100%; }
+html, body {
+  margin: 0;
+  font-family: "League Spartan", system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans", "Helvetica Neue", Arial;
+  font-weight: 600;              
+  line-height: 1.5;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  color: #e9efff;
+  background: #15161B;
+}
+#root { display: block; }
+
+a { color: #BE9BDF; text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+button, input, textarea, select { font: inherit; }
+
+h1, .h1 { font-weight: 800; }
+h2, .h2 { font-weight: 600; }
+h3, .h3 { font-weight: 600; }
+
+.app {
+  position: relative;
+}
+.app__content {
+  opacity: 0;
+  transition: opacity .45s ease .15s; 
+  padding: 24px;
+  margin: 0 auto;
+}
+.app.app--ready .app__content {
+  opacity: 1;
+}
+
+.splash {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgb(31, 36, 48);
+  display: flex;                  
+  align-items: center;         
+  justify-content: center;      
+  transition: opacity .4s ease, visibility .4s ease;
+  opacity: 1;
+  visibility: visible;
+}
+
+.splash--hide {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.splash__inner {
+  display: flex;
+  flex-direction: column;      
+  align-items: center;          
+  gap: 14px;
+  animation: splash-pop .6s ease both;
+}
+
+.splash__logo {
+  width: 500px;                 
+  height: 500px;
+  object-fit: contain;
+  display: block;
+  filter: drop-shadow(0 6px 18px rgba(0,0,0,.45));
+}
+
+.splash__brand {
+  font-size: 28px;
+  font-weight: 900;
+  letter-spacing: .4px;
+  color: #e9efff;
+  text-align: center;
+}
+
+@keyframes splash-pop {
+  0%   { transform: scale(.96); opacity: .0; }
+  60%  { transform: scale(1.02); opacity: 1; }
+  100% { transform: scale(1);    opacity: 1; }
+}

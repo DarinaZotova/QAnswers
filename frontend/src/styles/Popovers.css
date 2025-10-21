@@ -1,0 +1,105 @@
+.q-popover {
+  position: absolute;
+  right: -30px;
+  bottom: 0px;
+  min-width: 220px;
+  background: #11161f;
+  border: 1px solid #1f2a3a;
+  border-radius: 12px;
+  padding: 8px;
+  box-shadow: 0 12px 28px rgba(0,0,0,.35);
+  z-index: 30;
+}
+.q-popover__group { padding: 4px 0; }
+.q-popover__item {
+  display: flex; align-items: center; gap: 10px;
+  width: 100%; padding: 10px 10px;
+  background: transparent; border: none; color: #e9efff;
+  cursor: pointer; border-radius: 10px; text-align: left;
+}
+.q-popover__item:hover { background: rgba(191,165,255,.08); }
+.q-popover__danger { color: #fca5a5; }
+.q-popover__divider {
+  height: 1px; background: #1f2430; margin: 6px 0;
+}
+
+/* модалка */
+.q-modal__scrim {
+  position: fixed; inset: 0; background: rgba(0,0,0,.5);
+  display: grid; place-items: center; z-index: 50;
+}
+.q-modal {
+  width: min(720px, 92vw);
+  background: #0f1520;
+  border: 1px solid #1f2a3a;
+  border-radius: 16px;
+  box-shadow: 0 20px 50px rgba(0,0,0,.5);
+  padding: 16px;
+}
+.q-modal__head {
+  display: flex; justify-content: space-between; align-items: center;
+  margin-bottom: 10px;
+}
+.q-modal__title { margin: 0; font-size: 18px; font-weight: 800; }
+.q-modal__close {
+  background: transparent; border: none; color: #bfa5ff; cursor: pointer; font-size: 20px;
+}
+.q-form { display: grid; gap: 12px; }
+.q-field label { display:block; font-size:13px; opacity:.7; margin-bottom:6px; }
+.q-field input[type="text"], .q-field textarea, .q-field select {
+  width: 100%; background: #0b1220; color: #e9efff;
+  border: 1px solid #2a3242; border-radius: 10px;
+  padding: 10px 12px;
+}
+.q-chips { display:flex; gap:6px; flex-wrap: wrap; }
+.q-chip {
+  border: 1px solid #2a3242; border-radius: 999px;
+  padding: 6px 10px; font-size: 13px; cursor: pointer;
+  background: transparent; color: #c9d8ff;
+}
+.q-chip.is-on { background: #1a1f2c; border-color: #bfa5ff; }
+.q-actions { display:flex; gap:8px; justify-content: flex-end; margin-top: 8px; }
+.q-btn {
+  padding: 8px 12px; border-radius: 10px; cursor: pointer;
+  background: #1a1f2c; border:1px solid #2a3242; color:#e9efff;
+}
+.q-btn--primary { border-color:#bfa5ff; }
+.q-btn--ghost { background: transparent; }
+
+.q-modal-card{
+  border-radius: 16px;
+  background: #0f1520;
+  border: 1px solid rgba(31,42,58,0.6);
+  padding: 18px;
+}
+
+.q-modal__head{
+  display:flex; align-items:center; justify-content:space-between;
+  margin-bottom:12px;
+}
+.q-modal__title{ margin:0; font-size:18px; }
+.q-modal__close{
+  border:0; background:transparent; color:#e9efff; cursor:pointer; font-size:20px; line-height:1;
+}
+
+.q-form{ display:grid; gap:12px; }
+.q-field label{ display:block; font-size:13px; opacity:.8; margin-bottom:6px; }
+.q-field textarea{
+  width:100%; background:transparent; border:1px solid #2a3242; border-radius:10px;
+  padding:10px 12px; color:#e9efff; outline:none;
+}
+.q-field textarea:focus{ border-color:#bfa5ff; }
+
+.q-chips{ display:flex; flex-wrap:wrap; gap:8px; }
+.q-chip{
+  border:1px solid #2a3242; border-radius:999px; padding:6px 10px; background:transparent; color:#e9efff;
+}
+.q-chip.is-on{ border-color:#bfa5ff; background:#1a1f2c; }
+
+.q-actions{ display:flex; justify-content:flex-end; gap:8px; }
+.q-btn{ padding:10px 14px; border-radius:10px; border:1px solid #bfa5ff; background:#1a1f2c; color:#e9efff; cursor:pointer; }
+.q-btn--ghost{ background:transparent; border-color:#2a3242; }
+.q-btn[disabled]{ opacity:.6; cursor:not-allowed; }
+
+.q-error{ color:tomato; }
+.q-hint{ opacity:.7; font-size:13px; }

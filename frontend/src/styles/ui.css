@@ -1,0 +1,77 @@
+.modal-backdrop{
+  position: fixed; inset: 0;
+  background: rgba(0,0,0,.6);
+  backdrop-filter: blur(2px);
+  display: grid;
+  place-items: center;
+  z-index: 1000;
+  animation: fadeIn .15s ease-out;
+}
+@keyframes fadeIn{ from{ opacity:0 } to{ opacity:1 } }
+
+.modal-window{
+  width: min(92vw, 640px);
+  border-radius: 16px;            
+  background: transparent;          
+  padding: 0;                     
+  box-shadow: 0 30px 100px rgba(0,0,0,.55);
+  animation: popIn .15s ease-out;
+}
+
+.modal-inner{
+  background: #101317;
+  color: #e9efff;
+  border-radius: 16px;            
+  padding: 28px 24px;
+  border: none;                 
+}
+
+@keyframes popIn{
+  from{ transform: translateY(6px) scale(.98); opacity:.9 }
+  to  { transform: translateY(0)   scale(1)   ; opacity:1 }
+}
+
+.modal-title{
+  margin: 0; font-size: clamp(22px, 2.4vw, 32px);
+  font-weight: 600; letter-spacing: .2px;
+}
+.modal-sub{
+  margin: 6px 0 18px; color: #91a8bb; line-height: 1.4;
+  text-align: center;
+}
+
+.cta-login-btn{
+  display: flex; align-items: center; gap: 12px;
+  width: 100%;
+  background: #0b0d12;
+  border: 1.5px solid #1f2430;
+  border-radius: 16px;
+  padding: 14px 16px;
+  text-decoration: none;
+  color: #e9efff;
+  font-weight: 700;
+  justify-content: center;
+  transition: border-color .15s ease, box-shadow .15s ease, transform .04s ease;
+  box-shadow: 0 0 0 2px rgba(140, 180, 255, .0);
+}
+
+.cta-login-btn .chev{ margin-left: 8px; opacity: .7; font-size: 20px; }
+
+.user-id{
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 600;
+  letter-spacing: .2px;
+  color: #e9efff;
+}
+
+.user-sep{ opacity: .45; }
+
+.user-role{ text-transform: lowercase; opacity: .95; }
+
+.role-admin{ color: #facc15; }
+
+.role-user{ color: #BE9BDF; }
+
+.user-login{ color: #dfe7ff; }

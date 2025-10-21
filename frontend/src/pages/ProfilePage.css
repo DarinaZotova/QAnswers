@@ -1,0 +1,138 @@
+.profile-page {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 20px;
+}
+@media (max-width: 980px) {
+  .profile-page { grid-template-columns: 1fr; }
+}
+
+.profile-left {
+  position: sticky;
+  top: 90px;
+  align-self: start;
+}
+
+.profile-right { min-width: 0; }
+.profile-posts-title { margin: 0 0 10px 0; }
+
+.feed {
+  border: 1px solid #1f2430;
+  border-radius: 16px;
+  overflow: hidden;
+  background: transparent;
+}
+
+.profile-avatar {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+}
+
+.profile-avatar.avatar--floating {
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  transform: translate(-50%, -50%);
+  width: 132px;
+  height: 132px;
+  background: #0f1520;
+  border: 4px solid var(--q-panel, #0f1520);
+  box-shadow: 0 6px 20px rgba(0,0,0,.35);
+}
+
+.profile-card.profile-card--pill {
+  background: var(--q-panel, #0f1520);
+  border: 1px solid #1f2a3a;
+  border-radius: 1000px;
+  overflow: hidden;
+  text-align: center;
+}
+
+.profile-card__head {
+  position: relative;
+  height: 140px;
+  background: #a98ecf22;
+}
+
+.profile-card__body {
+  padding: 80px 22px 22px;
+}
+
+.role-badge{
+  display: inline-block;
+  margin: 4px auto 10px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 700;
+  background: #a98ecf22;           
+  color: #cdb8ec;                        
+}
+
+.role-badge.role-admin { color: #facc15; background: #3a300f;}
+.role-badge.role-user  { color: rgba(201,216,255,0.9); background:#305c70;}
+
+.login {
+  font-size: 22px;
+  font-weight: 400;
+  letter-spacing: .2px;
+  color: #6f8797;
+  margin-bottom: 4px;
+}
+
+.full-name {
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+.email {
+  display: block; 
+  font-size: 18px;
+  font-weight: 400;
+  color: #6f8797;
+  text-decoration: none;
+}
+
+.rating {
+  display: flex;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 12px;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.rating-icon {
+  width: 24px;
+  height: 24px;
+  display: block;
+}
+
+.profile-actions {
+  margin-top: 14px;
+  display: flex;
+  justify-content: center;
+}
+
+.pr-btn {
+  background: #1a1f2c;
+  border: 1px solid #bfa5ff;
+  color: #e9efff;
+  border-radius: 80px;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+@media (max-width: 520px) {
+  .profile-card__head { height: 120px; }
+  .profile-avatar.avatar--floating { width: 118px; height: 118px; }
+  .profile-card__body { padding-top: 72px; }
+  .full-name { font-size: 22px; }
+  .email { font-size: 16px; }
+}

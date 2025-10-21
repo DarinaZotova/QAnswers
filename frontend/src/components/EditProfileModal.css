@@ -1,0 +1,56 @@
+.ep-modal{
+  background: #11161f;
+  border: 1px solid #1f2a3a;
+  border-radius: 14px;
+  padding: 16px;
+}
+
+.ep-title{
+  margin: 0 0 10px 0; color: #7dd3fc;
+}
+
+.ep-body{ display: grid; gap: 12px; }
+
+.ep-avatar-row{
+  display: flex; gap: 14px; align-items: center;
+}
+.ep-avatar{
+  width: 84px; height: 84px; border-radius: 50%; object-fit: cover;
+}
+.ep-avatar-actions{ display: flex; gap: 8px; flex-wrap: wrap; }
+
+.ep-field{ display: grid; gap: 6px; margin-top: 10px;}
+.ep-field > span{ font-size: 13px; opacity: .7; }
+.ep-field > input{
+  background: #0f1520; color: #e9efff;
+  border: 1px solid #2a3242; border-radius: 10px;
+  padding: 8px 10px; outline: none;
+}
+
+.ep-footer{
+  display: flex; justify-content: space-between;
+  align-items: center; margin-top: 12px;
+}
+
+.ep-actions-right{ display: flex; gap: 8px; }
+
+.ep-btn{
+  padding: 8px 12px; border-radius: 10px; cursor: pointer;
+  background: #1a1f2c; color: #e9efff; border: 1px solid #2a3242;
+}
+.ep-btn--ghost{ background: transparent; }
+.ep-btn--primary{ border-color: #bfa5ff; }
+.ep-btn--danger-left{
+  background: #2b1313; border-color: #643; color: #ffdede;
+}
+
+.ep-msg{ font-size: 13px; }
+.ep-msg--err{ color: tomato; }
+.ep-msg--ok{ color: #8de48d; }
+
+.ep-avatar-upload-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 6px;
+  vertical-align: middle;
+}
