@@ -1,0 +1,27 @@
+# Node / JS
+node_modules/
+dist/
+build/
+.vite/
+.next/
+coverage/
+
+# Env / secrets
+.env
+.env.*
+frontend/.env
+backend/.env
+
+# Logs/temp
+*.log
+npm-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# OS / IDE
+.DS_Store
+.idea/
+.vscode/
+
+# Project specifics
+backend/uploads/
